@@ -1,0 +1,1117 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    color: #0e1b4d;
+}
+p{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+.speakers,.venue,.gallery,.contactus,.pricing,.newsletter,.faq,.sponsors {
+    padding: 70px;
+}
+html {
+    scroll-behavior: smooth;
+  }
+/**********************************************************/
+#back-to-top i {
+    font-size: 24px;
+    padding-top: 6px;
+}
+#back-to-top {
+    background-color: #f82249;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50px;
+    
+    bottom: 30px;
+    right: 30px;
+    transition: background-color 0.5s ease-in-out;
+    
+}
+.show-button{
+    display: inline-block;
+    position: fixed;
+    z-index: 1000;
+}
+#back-to-top:hover {
+    cursor: pointer;
+    background: #e0072f;
+    color: #fff;
+}
+#back-to-top:active {
+    background: #e0072f;
+    color: #fff;
+}
+/********************************************************** START HEADER **********************************************************/
+.header{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/intro-bg.jpg) top center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    background-attachment: fixed;
+}
+.header:before,
+.overlay {
+    content: "";
+    background: rgba(6, 12, 34, 0.8);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.logo{
+    max-height: 40px;
+}
+.nav-slider{
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 1;
+    align-items: center;
+}
+.navbar{
+    padding: 25px 0;
+    transition: all 0.5s;
+    z-index: 997;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding-left: 120px;
+    padding-right: 120px;
+    height: 70px;
+}
+.nav-item {
+    margin-left: 8px;
+}
+.navbar-dark .navbar-nav .nav-link:focus{
+    color: rgba(202, 206, 221, 0.8);
+}
+.navbar-dark .navbar-nav a.active,
+.navbar-dark .navbar-nav .nav-link.active
+{
+    color: #fff;
+    border-bottom: 2px solid #f82249;
+    padding-bottom: 6px;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(202, 206, 221, 0.8);
+}
+.navbar-dark .navbar-nav .nav-link:hover
+{
+    color: #fff;
+}
+.nav-link {
+    position: relative;
+    overflow: hidden;
+  }
+.navbar-nav li a:hover:After {
+    width:100%;
+    left: 0;
+}
+.navbar-nav li a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    background: #f82249;
+    transition: width 1s ease 0s, left 0.5s ease 0s;
+    width: 0;
+}
+a.button1 {
+    display: inline-block;
+    border: 0.15em solid #f82249;
+    padding: 0.4em 1.4em;
+    margin: 0.2em;
+    border-radius: 50px 50px 50px 50px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    transition: all ease-in-out 0.3s;
+    color: #fff;
+    background: #f82249;
+    margin-left: 15px;
+}
+a.button1:hover{
+    color: white;
+    background-color: transparent;
+    
+}
+@media all and (max-width:30em){
+    a.button1{
+    display:block;
+    margin:0.4em auto;
+    }
+}
+.titlediv{
+    z-index: 9;
+    position: relative;
+    padding-top: 160px;
+}
+.headtitle{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 56px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.headtitle span{
+    color: #f82249;
+}
+.headdate{
+    font-size: 20px;
+    text-align: center;
+    color: #ebebeb;
+    margin-top: 20px;
+}
+.playbutton{
+    margin: 40px;
+}
+.circle {
+    stroke: #f82249;
+    stroke-dasharray: 650;
+    stroke-dashoffset: 650;
+    transition: all 0.5s ease-in-out;
+    opacity: 0.3;
+}
+.playBut {
+   /* border: 1px solid red;
+   */
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+.playBut .triangle {
+    transition: all 0.7s ease-in-out;
+    stroke-dasharray: 240;
+    stroke-dashoffset: 480;
+    stroke: #fff;
+    transform: translateY(0);
+}
+.playBut:hover .triangle {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    stroke: #fff;
+    animation: nudge 0.7s ease-in-out;
+}
+@keyframes nudge {
+    0% {
+        transform: translateX(0);
+   }
+    30% {
+        transform: translateX(-5px);
+   }
+    50% {
+        transform: translateX(5px);
+   }
+    70% {
+        transform: translateX(-2px);
+   }
+    100% {
+        transform: translateX(0);
+   }
+}
+.playBut:hover .circle {
+    stroke-dashoffset: 0;
+    opacity: 1;
+}
+a.button2 {
+    display: inline-block;
+    border: 0.15em solid #f82249;
+    padding: 0.5em 2.5em;
+    margin: 0.2em;
+    border-radius: 50px 50px 50px 50px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all ease-in-out 0.3s;
+    color: #fff;
+    background-color: transparent;
+    margin-left: 15px;
+    letter-spacing: 1px;
+}
+a.button2:hover{
+    background: #f82249;
+}
+/********************************************************** END HEADER **********************************************************/
+/********************************************************** START ABOUT EVENT **********************************************************/
+.aboutevent{
+    width: 100%;
+    height: auto;
+    background: url(../img/about-bg.jpg);
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    padding: 40px;
+}
+.about_text{
+    margin-top: 10px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+.about_text p{
+    font-size: 15px;
+    line-height: 21px;
+}
+.about_text h2{
+    color: #fff;
+    font-weight: bold;
+}
+.about_text h3{
+    font-size: 20px;
+    color: #fff;
+}
+/********************************************************** END ABOUT EVENT **********************************************************/
+/********************************************************** START SPEAKERS **********************************************************/
+.speakers_text{
+    margin-bottom: 50px;
+}
+.speakers_text h2{
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+.speakers_text p{
+    color: #9195a2;
+    font-size: 18px;
+    font-weight: 500;
+}
+hr.line1 {
+    border: 2px solid #f82249;
+    width: 60px;
+}
+.speaker {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.speaker img{
+    max-width: 100%;
+    height: auto;
+}
+.speaker-description{
+    background: rgba(6, 12, 34, 0.76);
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    right: 0;
+    padding-top: 10px;
+    transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.speaker-description a{
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    transition: 0.5s;
+    text-decoration: none;
+}
+.speaker-description a:hover{
+    color: #f82249;
+}
+.speaker-description p{
+    font-size: 15px;
+    font-style: italic;
+}
+.speaker-description ul li {
+    display: inline-block;
+}
+.speaker-description ul li i{
+    font-size: 19px;
+    margin: 2px;
+}
+.speaker:hover .speaker-description{
+    bottom: 0;
+    transition: 0.5s;
+}
+/********************************************************** END SPEAKERS **********************************************************/
+/********************************************************** START SCHEDULE **********************************************************/
+.schedule{
+    background-color:#F6F7FD;
+}
+#schedule .nav-tabs {
+  text-align: center;
+  margin: auto;
+  display: block;
+  border-bottom: 0;
+  margin-bottom: 30px;
+}
+  
+#schedule .nav-tabs li {
+  display: inline-block;
+  margin-bottom: 0;
+}
+  
+#schedule .nav-tabs a {
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  background-color: #0e1b4d;
+  color: #fff;
+  padding: 10px 100px;
+}
+  
+#schedule .nav-tabs a.active {
+  background-color: #f82249;
+  color: #fff;
+}
+.sub-heading{
+    margin:35px;
+    font-style: italic;
+    font-size: 18px;
+}
+.speaker_image{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+.speaker_image img{
+    height: 100%;
+    transform: translateX(-50%);
+    margin-left: 50%;
+    transition: all ease-in-out 0.3s;
+}
+.schedule-item h4{
+    font-size: 18px;
+    font-weight: 600;
+}
+.schedule-item time{
+    color:#2f3138;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+#schedule .schedule-item {
+    border-bottom: 1px solid #cad4f6;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: background-color ease-in-out 0.3s;
+  }
+  
+#schedule .schedule-item:hover {
+    background-color: #fff;
+}
+.schedule-item p,
+.schedule-item h4 span{
+    color: #152b79;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+/********************************************************** END SCHEDULE **********************************************************/
+/********************************************************** START VENUE **********************************************************/
+.venueinfo{
+    background: url(../img/venue-info-bg.jpg) top center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+.infotext{
+    padding: 0px 70px 0px 70px;
+    position: relative;
+    color: #fff;
+}
+.infotext h3{
+    font-weight: 700;
+    font-size: 36px;
+    padding: 50px 0px 0px 0px;
+    color: #fff;
+}
+.infotext p{
+    padding: 10px;
+    font-size: 16px;
+}
+.image-box {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    margin: 2px 2px 0px 2px;
+}
+.image-box img {
+    max-width: 100%;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+}
+.image-box:hover img {
+    transform: scale(1.1);
+}
+/********************************************************** END VENUE **********************************************************/
+/********************************************************** START HOTELS **********************************************************/
+.hotels{
+    background-color:#F6F7FD;
+    padding: 70px
+}
+.checked {
+    color: orange;
+}
+.stars{
+    margin: 5px 0px 5px 0px;
+}
+.hotels .card-body a{
+    font-size: 20px;
+    color: #152b79;
+    font-family:'Raleway', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+.card-body a:hover{
+    color: #e2234e;
+    transition: 0.5s;
+}
+.card-body p{
+    font-size: 15px;
+    color: #060c22;
+    font-family:'Open Sans', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.image-box2 {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    width: auto;
+}
+.image-box2 img {
+    max-width: 100%;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+}
+.image-box2:hover img {
+    transform: scale(1.1);
+}
+/********************************************************** END HOTELS **********************************************************/
+/********************************************************** START GALLERY **********************************************************/
+.center{
+    border: 6px solid #f82249;
+    padding: 4px;
+    background: #fff;
+}
+.vbox-close {
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+}
+/********************************************************** END GALLERY **********************************************************/
+/********************************************************** START SPONSORS **********************************************************/
+.image-box3 {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    width: auto;
+    padding: 40px;
+}
+.image-box3 img {
+    max-width: 100%;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+}
+.image-box3:hover img {
+    transform: scale(1.1);
+}
+/********************************************************** END SPONSORS **********************************************************/
+/********************************************************** START F.A.Q **********************************************************/
+.faq_text{
+    margin-bottom: 60px;
+}
+.faq_text h2{
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+hr.line1 {
+    border: 2px solid #f82249;
+    width: 60px;
+}
+.bs-example{
+    margin: 20px;
+}
+.accordion .fa{
+    margin-right: 0.5rem;
+}
+.faq .card-header{
+    background-color: #fff;
+    border-bottom: 0;
+    padding: 7px 0px 7px 0px;
+}
+.faq .card-body{
+    padding: 12px !important;
+}
+.faq .card-body p{
+    color: #2f3138;
+    font-family:'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: unset;
+}
+.collapserow{
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    cursor: pointer;
+}
+.faq [type=button]:not(:disabled),.faq [type=reset]:not(:disabled),.faq [type=submit]:not(:disabled),.faq button:not(:disabled) {
+    cursor: pointer;
+    float: right;
+    color: black;
+    font-size: 18px;
+}
+.mb-0 .btn-link .fa-minus-circle {
+  color: #f82249;
+}
+a:not([href]):not([tabindex]){
+    color: #f82249 ;
+    font-size: 16px;
+    font-family:'Raleway', sans-serif;
+    font-weight: bold;
+}
+a:not([href]):not([tabindex]):hover{
+    color: #f82249;
+}
+.mb-0 .btn-link.collapsed:hover{
+    color: #000;
+}
+.mb-0 .btn-link.collapsed{
+    color:#000;
+    font-size: 16px;
+    font-family:'Raleway', sans-serif;
+    font-weight: bold;
+}
+/********************************************************** END F.A.Q **********************************************************/
+/********************************************************** START NEWSLETTER **********************************************************/
+.newsletter_text{
+    margin-bottom: 50px;
+}
+.newsletter_text h2{
+    color: #fff;
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+.newsletter_text p{
+    font-size: 18px;
+    font-weight: 500;
+}
+hr.line1 {
+    border: 2px solid #f82249;
+    width: 60px;
+}
+.newsletter_overlay{
+    content: "";
+    background:  rgba(6, 12, 34, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.newsletter{
+    width: 100%;
+    height: auto;
+    background: url(../img/subscribe-bg.jpg);
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+.newsletter .form-control{
+    min-width: 400px;
+    border-radius: 15px;
+}
+a.button3 {
+    display: inline-block;
+    border: 0.15em solid #f82249;
+    padding: 0.6em 3em;
+    margin: 0.2em;
+    border-radius: 50px 50px 50px 50px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    transition: all ease-in-out 0.3s;
+    color: #fff;
+    background: #f82249;
+    margin-left: 15px;
+}
+a.button3:hover{
+    color: white;
+    background-color: transparent;
+    
+}
+@media all and (max-width:30em){
+    a.button3{
+    display:block;
+    margin:0.4em auto;
+    }
+}
+/********************************************************** END NEWSLETTER **********************************************************/
+/********************************************************** START TICKETS **********************************************************/
+.pricing .card {
+    border: none;
+    border-radius: 1rem;
+    transition: all 0.2s;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+  
+.price_line {
+    margin: 1.5rem 0;
+}
+  
+.pricing .card-title {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+}
+  
+.pricing .card-price {
+    font-size: 3rem;
+    margin: 0;
+    color: #0e1b4d;
+}
+  
+.pricing ul li {
+    margin-bottom: 1rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+}
+  
+.pricing .text-muted {
+    opacity: 0.7;
+}
+  
+.pricing .btn {
+    font-size: 80%;
+    border-radius: 5rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    opacity: 0.7;
+    transition: all 0.2s;
+}
+
+/* Hover Effects on Card */
+  
+@media (min-width: 992px) {
+  .pricing .card:hover {
+    margin-top: -.25rem;
+    margin-bottom: .25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+  }
+  .pricing .card:hover .btn {
+    opacity: 1;
+  }
+}
+.pricing .btn-block {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+.pricing .btn-primary{
+    background-color: #f82249;
+    border: none;
+}
+.pricing .btn-primary:hover{
+    color: #fff;
+}
+.pricing .card-body{
+    padding: 40px;
+}
+/********************************************************** END TICKETS **********************************************************/
+/********************************************************** Start CONTACT US **********************************************************/
+.contact-box{
+    padding: 20px 0;
+}
+.contact-box h3{
+    font-weight: 700;
+    font-size:18px;
+    margin-bottom: 15px;
+}
+.contact-box p{
+    color: #112363;
+    font-size: 16px;
+}
+.contact-phone{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+/*------Form-----*/
+.form-style-7{
+    margin-top: 50px;
+}
+.form-style-7 h1{
+	text-align: center;
+	padding: 0;
+	margin: 0px 0px 20px 0px;
+	color: #5C5C5C;
+	font-size:x-large;
+}
+.form-style-7 ul{
+	list-style:none;
+	padding:0;
+	margin:0;	
+}
+.form-style-7 li{
+	padding: 9px;
+	border:2px solid #e2e2e2;
+	margin-bottom: 30px;
+	border-radius: 3px;
+}
+.form-style-7 li > label{
+    color: #717981;
+	display: block;
+	float: left;
+	margin-top: -19px;
+	background: white;
+	height: 14px;
+	padding: 0px 5px 2px 5px;
+	font-size: 12px;
+    overflow: hidden;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.form-style-7 input[type="text"],
+.form-style-7 input[type="email"],
+.form-style-7 textarea,
+.form-style-7 select 
+{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	display: block;
+	outline: none;
+	border: none;
+    font-size: 16px;
+	padding: 0;
+	font-family: "Open Sans", sans-serif;
+}
+.form-style-7 li:hover {
+	border: 2px solid #f82249;
+  transition: all .4s;
+}
+.form-style-7 textarea{
+    height: auto;
+}
+.form50{
+    display: inline-block;
+    width: 48.8%;
+}
+.form60{
+    display: inline-block;
+    width: 48.8%;
+    margin-left: 20px;
+}
+.form-style-7 li {
+    padding: 9px;
+    border: 2px solid #e2e2e2;
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+.fromboxed{
+    padding: 30px;
+}
+.fromboxed .btn-primary {
+    background-color: #f82249;
+    border: none;
+}
+.fromboxed .btn-block {
+    display: block;
+    width: 20%;
+    margin: 0 auto;
+    border-radius: 25px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: unset !important;
+}
+.fromboxed .btn{
+    padding: .575rem .75rem;
+}
+/********************************************************** END CONTACT US **********************************************************/
+/********************************************************** START FOOTER **********************************************************/
+footer {
+    background: #101522;
+    padding: 0 0 25px 0;
+    color: #eee;
+    font-size: 14px;
+}
+.first_footer{
+    background-color: #040919;
+    padding: 60px;
+}
+.footer_text{
+    margin-top: 10px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+.footer-links h4{
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f82249;
+    margin-bottom: 15px;
+}
+.footer-links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-links ul li:first-child {
+    padding-top: 0;
+}
+.footer-links ul li{
+    border-bottom: 1px solid #262c44;
+    padding: 10px 0;
+}
+.footer-links ul li i{
+    padding-right: 5px;
+    color: #f82249;
+    font-size: 12px;
+}
+.footer-links ul li a{
+    color: #eee;
+    text-decoration: none;
+}
+.footer-links ul li a:hover{
+    color: #f82249;
+    transition: 0.5s;
+}
+.footer-links p{
+    color: #eee;
+    font-size: 14px;
+    line-height: 28px;
+}
+.social_links a {
+    margin-top: 15px;
+    font-size: 18px;
+    display: inline-block;
+    background: #222636;
+    color: #eee;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+.social_links a:hover{
+    background: #f82249;
+    transition: 0.5s;
+}
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+}
+.credits {
+    text-align: center;
+    font-size: 13px;
+    color: #ddd;
+}
+.credits a{
+    color: #f82249;
+    text-decoration: none;
+}
+/********************************************************** END FOOTER **********************************************************/
+@media (min-width:321px) and (max-width: 992px){
+    .speakers, .gallery, .contactus, .pricing, .newsletter, .faq,.hotels{
+        padding: 50px 0 50px 0;
+    }
+    .venue,.sponsors{
+        padding: 50px 20px 50px 20px;
+    }
+    .infotext{
+        padding: 0;
+    }
+    .navbar{
+        padding: 0 15px 0 15px;
+    }
+    .navbar-light .navbar-toggler {
+        color: rgb(255, 248, 248);
+        border-color: transparent;
+    }
+    .headtitle{
+        font-size:34px;
+    }
+    .headdate{
+        padding: 0 20px 0 20px;
+        font-size:16px;
+    }
+    #schedule .nav-tabs a {
+        padding: 10px 31px;
+    }
+    .sub-heading{
+        margin:20px;
+    }
+    .faq{
+        padding: 0;
+    }
+    .mb-0 .btn-link.collapsed,
+    .mb-0 a:not([href]):not([tabindex]) {
+        text-align: left;
+    }
+    a.button3{
+        margin-top: 20px ;
+    }
+    .contact-phone{
+        border: 0;
+    }
+    .form50,.form60{
+        width: 100%;
+        margin: 0;
+    }
+    .fromboxed .btn-block{
+        width: 40%;
+    }
+    .footer-links h4{
+        margin-top: 20px;
+    }
+    #hotels .card{
+        margin-bottom: 30px;
+    }
+    .image-box3{
+        margin: 2px;
+        padding: 20px;
+    }
+    .first_footer{
+        padding: 60px 0 60px 0;
+    }
+    .faq .collapserow .btn {
+        display: contents;
+    }
+    .nav-item{
+        margin-left: 0;
+    }
+}
+.nav-slider.toggling {
+    transition: transform 0.35s, opacity 0.35s;
+}
+@media (min-width:321px) and (max-width: 992px){
+   /* next */
+    .nav-slider {
+        opacity: 0;
+        position: fixed;
+        z-index: 200;
+        background-color: rgb(8, 11, 28);
+        display: block;
+   }
+    .nav-slider .navbar-nav {
+        margin-left: 30px;
+        margin-top: 20px;
+   }
+    .nav-slider .navbar-nav .nav-item {
+        float: none;
+   }
+    .nav-slider .navbar-nav .nav-item .nav-link {
+        padding-left: 1rem;
+        padding-right: 1rem;
+   }
+    .nav-slider .navbar-nav .nav-item + .nav-item {
+        margin-left: 0;
+   }
+    body.has-active-menu {
+        overflow: hidden;
+   }
+    .nav-mask {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        width: 0;
+        height: 0;
+        background: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transition: opacity 0.25s, width 0s 0.25s, height 0s 0.25s;
+   }
+    .has-active-menu .nav-mask {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        transition: opacity 0.25s;
+   }
+    .nav-slider {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+   }
+    .has-active-menu .nav-slider {
+        opacity: 1;
+        transform: translateX(0);
+   }
+}
+@media (min-width:321px) and (max-width: 992px){
+    .nav-slider {
+        width: 300px;
+        transform: translateX(-300px);
+   }
+}
+@media (min-width:1024px) and (max-width : 1224px){
+    .navbar{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    a.button1{
+        display: none;
+    }
+    .form50,.form60{
+        width: 100%;
+        margin: 0;
+    }
+}
+#about,#speaker,
+#venue,
+#hotels,
+#sponsors,
+#contact{
+    position: relative;
+    padding-top: 90px;
+}
